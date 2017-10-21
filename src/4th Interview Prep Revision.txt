@@ -1,0 +1,17 @@
+Friday, October 20
+Topic: Trees and Graphs
+Question: 
+Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a route between two nodes. 
+スタート。
+BFSを使ってimplement.
+LinkedListを使ってQueueの作成。
+For each loop を使ってNodeをunvisitに設定。
+Start ＝ Visitingでrootの設定。
+Start(root) をQueueにAdd。
+Node uを作成。
+Queueの中が空でない限りwhile loopへ入場。
+最初のNodeをdequeue して、nullじゃなかったらuのadjacencyであるvをfor loopで一つずつ確認。
+もしvがまだ訪問されてないNodeで、ｖがendだったらreturn true。
+V == endでなければvをrootにしてQueueにAdd。
+Uを訪問済みに設定しwhile loopの頭に戻る。
+以上のプロセスすべて通過し終えてしまった場合return false。
